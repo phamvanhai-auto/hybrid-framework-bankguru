@@ -3,7 +3,7 @@
 
   <test name="Run On Firefox">
     <classes>
-      <class name="com.bankguru.user.User_01_New_Customer"/>
+      <class name="com.bankguru.login.Level_01_Register_Login_RY"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
