@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Bank Guru">
+
+  <test name="Run On Firefox">
+    <classes>
+      <class name="com.bankguru.user.User_01_New_Customer"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
