@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Live Guru">
+
+  <test name="Run On Firefox">
+    <classes>
+      <class name="com.liveguru.login.Level_03_Login_Page_Object"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

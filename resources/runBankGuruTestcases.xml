@@ -3,7 +3,10 @@
 
   <test name="Run On Firefox">
     <classes>
-      <class name="com.bankguru.login.Level_01_Register_Login_RY"/>
+<!--       <class name="com.bankguru.login.Level_01_Register_Login_RY"/> -->
+<!--       <class name="com.bankguru.login.Level_02_Register_Login_BasePage_1"/> -->
+<!--       <class name="com.bankguru.login.Level_02_Register_Login_BasePage_2"/> -->
+      <class name="com.bankguru.login.Level_02_Register_Login_BasePage_3"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
