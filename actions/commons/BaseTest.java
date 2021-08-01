@@ -1,6 +1,7 @@
 package commons;
 
 import java.io.File;
+import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -121,4 +122,9 @@ public class BaseTest {
 		return (osName.toLowerCase().indexOf("sunos") >= 0);
 	}
 
+	public String genEmail() {
+		Random rand = new Random();
+		return "autofc" + rand.nextInt(9999) + "@mail.com";
+		
+	}
 }
