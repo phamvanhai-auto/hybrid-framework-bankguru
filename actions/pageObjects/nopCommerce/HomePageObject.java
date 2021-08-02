@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import pageUIs.nopCommerce.HomePageUI;
+import pageUIs.nopCommerce.SearchPageUI;
 
 public class HomePageObject extends BasePage{
 	private WebDriver driver;
@@ -30,6 +31,15 @@ public class HomePageObject extends BasePage{
 		//return new LoginPageObject(driver);
 		return PageGeneratorManager.getLoginPage(driver);
 	}
-	
-	
+//	public SearchPageObject openSearchPage() {
+//		waitForElementVisible(driver, HomePageUI.SEARCH_PAGE_FOOTER);
+//		clickToElement(driver, HomePageUI.SEARCH_PAGE_FOOTER);
+//		return PageGeneratorManager.getSearchPage(driver);
+//	}
+//	public WishListHeaderPageObject openWishListHeader() {
+//		waitForElementVisible(driver, HomePageUI.WISHLIST_PAGE_HEADER);
+//		clickToElement(driver, HomePageUI.WISHLIST_PAGE_HEADER);
+//		return PageGeneratorManager.getWishListHeaderPage(driver);
+//	}
+
 }
