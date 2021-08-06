@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Data Table">
+
+  <parameter name = "url" value = "https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/" />
+  
+  <test name="Run On Chrome">
+  	<parameter name = "browser" value = "chrome" />
+    <classes>
+      <class name="com.jquery.datatable.Level_09_JQuery_DataTable"/>
+    </classes>
+  </test>
+  
+
+</suite> <!-- Suite -->

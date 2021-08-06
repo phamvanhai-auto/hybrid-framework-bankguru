@@ -6,7 +6,7 @@
   <test name="Run On Firefox">
   	<parameter name = "browser" value = "firefox" />
     <classes>
-      <class name="com.nopcommerce.login.Level_06_Register_Login_Page_Generator"/>
+      <class name="com.nopcommerce.login.Level_08_Register_Login_Dyamic_Locator"/>
     </classes>
   </test>
   

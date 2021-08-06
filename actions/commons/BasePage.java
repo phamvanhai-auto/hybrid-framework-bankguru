@@ -171,9 +171,13 @@ public class BasePage {
 		getElement(driver, locator).clear();
 		getElement(driver, locator).sendKeys(value);
 	}
-
+	
 	public int getElementSize(WebDriver driver, String locator) {
 		return getElements(driver, locator).size();
+	}
+
+	public int getElementSize(WebDriver driver, String locator, String... params) {
+		return getElements(driver, getDynamicLocator(locator, params)).size();
 	}
 
 	public void selectItemInDropdownByText(WebDriver driver, String locator, String itemText) {
@@ -277,10 +281,16 @@ public class BasePage {
 		action = new Actions(driver);
 		action.dragAndDrop(getElement(driver, sourceLocator), getElement(driver, targetLocator)).perform();
 	}
-
+	
 	public void pressKeyToElement(WebDriver driver, String locator, Keys key) {
 		action = new Actions(driver);
-		action.sendKeys(getElement(driver, locator), key);
+		action.sendKeys(getElement(driver, locator), key).perform();;
+	}
+
+	public void pressKeyToElement(WebDriver driver, String locator, Keys key, String... params) {
+		action = new Actions(driver);
+		locator = getDynamicLocator(locator, params);
+		action.sendKeys(getElement(driver, locator), key).perform();;
 	}
 
 	public Object executeForBrowser(WebDriver driver, String javaScript) {
