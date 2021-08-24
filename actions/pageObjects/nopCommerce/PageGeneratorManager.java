@@ -17,10 +17,11 @@ public class PageGeneratorManager {
 	}
 	
 	public static HomePageObject getHomePage(WebDriver driver) {
-		if(homePage == null) {
-			homePage = new HomePageObject(driver);
-		}
-		return homePage;
+//		if(homePage == null) {
+//			homePage = new HomePageObject(driver);
+//		}
+//		return homePage;
+		return homePage = new HomePageObject(driver);
 	}
 	
 	public static RegisterPageObject getRegisterPage(WebDriver driver) {

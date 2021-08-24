@@ -204,6 +204,12 @@ public class BasePage {
 		select = new Select(getElement(driver, locator));
 		select.selectByVisibleText(itemText);
 	}
+	
+	public void selectItemInDropdownByText(WebDriver driver, String locator, String itemText, String... params) {
+		locator = getDynamicLocator(locator, params);
+		select = new Select(getElement(driver, locator));
+		select.selectByVisibleText(itemText);
+	}
 
 	public String getSelectedItemDropdown(WebDriver driver, String locator) {
 		select = new Select(getElement(driver, locator));
@@ -539,4 +545,32 @@ public class BasePage {
 		getElement(driver, AdminBasePageUIs.UPLOAD_FILE_CARD_NAME, cardName).sendKeys(fullFileName);
 		
 	}
+
+	//Pattern Object
+	public void openHeaderPageByLinkName(WebDriver driver, String pageName) {
+		waitForElementVisible(driver, BasePageUI.DYNAMIC_LOCATOR_HEADER_LINK_NAME, pageName);
+		clickToElement(driver, BasePageUI.DYNAMIC_LOCATOR_HEADER_LINK_NAME, pageName);
+	}
+	
+	public void clickToRadioButtonByName(WebDriver driver, String radioName) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_LOCATOR_RADIO_BUTTON_BY_NAME, radioName);
+		clickToElement(driver, BasePageUI.DYNAMIC_LOCATOR_RADIO_BUTTON_BY_NAME, radioName);
+	}
+	
+	public void inputToTextBoxByID(WebDriver driver, String textBoxID, String value) {
+		waitForElementVisible(driver, BasePageUI.DYNAMIC_LOCATOR_TEXT_BOX_BY_ID, textBoxID);
+		sendKeyToElement(driver, BasePageUI.DYNAMIC_LOCATOR_TEXT_BOX_BY_ID, value, textBoxID);
+	}
+	
+	public void clickToButtonByName(WebDriver driver, String buttonName) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_LOCATOR_BUTTON_BY_NAME, buttonName);
+		clickToElement(driver, BasePageUI.DYNAMIC_LOCATOR_BUTTON_BY_NAME, buttonName);
+	}
+	
+	public void selectDropdownByName(WebDriver driver, String dropDownName, String itemText) {
+		selectItemInDropdownByText(driver, BasePageUI.DYNAMIC_LOCATOR_DROPDOWN_BY_NAME, itemText, dropDownName);
+	}
+	
+	
+
 }

@@ -12,4 +12,11 @@ public class BasePageUI {
 	public static final String DYNAMIC_LOCATOR_FOOTER = "//div[@class='footer']//a[text()='%s']";
 	
 	public static final String DYNAMIC_LOCATOR_HEADER = "//div[@class='header']//span[text()='%s']";
+	
+	//Pattern Object
+	public static final String DYNAMIC_LOCATOR_HEADER_LINK_NAME = "//div[@class='header']//a[text()='%s']";
+	public static final String DYNAMIC_LOCATOR_RADIO_BUTTON_BY_NAME = "//label[text()='%s']/preceding-sibling::input";
+	public static final String DYNAMIC_LOCATOR_TEXT_BOX_BY_ID = "//input[@id='%s']";
+	public static final String DYNAMIC_LOCATOR_BUTTON_BY_NAME = "//button[text()='%s']";
+	public static final String DYNAMIC_LOCATOR_DROPDOWN_BY_NAME = "//select[@name='%s']";
 }

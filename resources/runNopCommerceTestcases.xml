@@ -16,8 +16,7 @@
   <test name="Run On Firefox">
   	<parameter name = "browser" value = "firefox" />
     <classes>
-      <class name="com.nopcommerce.common.Common_01_Login"/>
-      <class name="com.nopcommerce.login.Level_14_Register_Login_Share_State"/>
+      <class name="com.nopcommerce.login.Level_15_Register_Login_Pattern_Object"/>
     </classes>
   </test>
   

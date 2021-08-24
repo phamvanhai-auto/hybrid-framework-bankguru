@@ -50,9 +50,9 @@ public class Level_14_Register_Login_Share_State extends BaseTest {
 		loginPage.SleepInSecond(3);
 		loginPage.refreshPage(driver);
 		
-		log.info("Login_02 - Step 03: Verify Homepage displayed");
-		homePage = PageGeneratorManager.getHomePage(driver);
-		verifyTrue(homePage.isHomePageSliderDisplayed());
+//		log.info("Login_02 - Step 03: Verify Homepage displayed");
+//		homePage = PageGeneratorManager.getHomePage(driver);
+//		verifyTrue(homePage.isHomePageSliderDisplayed());
 	}
 
 	@Test
