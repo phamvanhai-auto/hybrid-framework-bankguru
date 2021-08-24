@@ -3,6 +3,7 @@ package pageObjects.nopCommerce;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
+import io.qameta.allure.Step;
 import pageUIs.nopCommerce.HomePageUI;
 import pageUIs.nopCommerce.SearchPageUI;
 
@@ -13,11 +14,14 @@ public class HomePageObject extends BasePage{
 	public HomePageObject(WebDriver driver) {
 		this.driver = driver;
 	}
+	
+	@Step("Verify Home page slider displayed")
 	public boolean isHomePageSliderDisplayed() {
 		waitForElementVisible(driver, HomePageUI.HOMEPAGE_SLIDER);
 		return isElementDisplayed(driver, HomePageUI.HOMEPAGE_SLIDER);
 	}
 
+	@Step("Click to Register link")
 	public RegisterPageObject clickToRegisterLink() {
 		waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
@@ -25,6 +29,7 @@ public class HomePageObject extends BasePage{
 		return PageGeneratorManager.getRegisterPage(driver);
 	}
 
+	@Step("Click to Login link")
 	public LoginPageObject clickToLoginLink() {
 		waitForElementVisible(driver, HomePageUI.LOGIN_LINK);
 		clickToElement(driver, HomePageUI.LOGIN_LINK);

@@ -1,0 +1,308 @@
+[INFO ] [2021-08-11 11:21:33,456] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-11 11:21:46,684] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-11 11:21:46,889]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-11 11:21:46,892] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-11 11:21:50,045] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-11 11:21:50,379] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-11 11:21:50,640] Register_01 - Step 05: Input 'Email' textbox autofc8994@mail.com
+[INFO ] [2021-08-11 11:21:50,751] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-11 11:21:50,945] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-11 11:21:55,295] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-11 11:21:55,384]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-11 11:21:55,385] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-11 11:21:57,022] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-11 11:21:59,318] Login_02 - Step 02: Input 'Email' autofc8994@mail.com
+[INFO ] [2021-08-11 11:21:59,445] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-11 11:21:59,544] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-11 11:22:02,619] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-11 11:22:02,707]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-12 23:19:33,213] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-12 23:19:46,037] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-12 23:19:46,175]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-12 23:19:46,176] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-12 23:19:49,310] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-12 23:19:49,624] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-12 23:19:49,896] Register_01 - Step 05: Input 'Email' textbox autofc4794@mail.com
+[INFO ] [2021-08-12 23:19:50,028] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-12 23:19:50,284] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-12 23:19:54,858] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-12 23:19:54,986]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-12 23:19:54,987] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-12 23:19:56,622] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-12 23:19:59,108] Login_02 - Step 02: Input 'Email' autofc4794@mail.com
+[INFO ] [2021-08-12 23:19:59,286] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-12 23:19:59,397] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-12 23:20:00,989] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-12 23:20:01,123]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-12 23:34:22,034] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-12 23:34:33,463] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-12 23:34:33,672]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-12 23:34:33,676] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-12 23:34:36,904] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-12 23:34:37,236] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-12 23:34:37,566] Register_01 - Step 05: Input 'Email' textbox autofc871@mail.com
+[INFO ] [2021-08-12 23:34:37,727] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-12 23:34:37,914] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-12 23:34:42,313] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-12 23:34:42,401]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-12 23:34:42,401] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-12 23:34:45,458] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-12 23:34:46,343] Login_02 - Step 02: Input 'Email' autofc871@mail.com
+[INFO ] [2021-08-12 23:34:46,465] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-12 23:34:46,560] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-12 23:34:51,409] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-12 23:34:51,496]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-12 23:35:16,922] ---------- START delete file in folder ----------
+[INFO ] [2021-08-12 23:35:16,925] ---------- END delete file in folder ----------
+[INFO ] [2021-08-12 23:35:16,945] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-12 23:35:26,916] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-12 23:35:27,088]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-12 23:35:27,090] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-12 23:35:28,598] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-12 23:35:28,913] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-12 23:35:29,141] Register_01 - Step 05: Input 'Email' textbox autofc3652@mail.com
+[INFO ] [2021-08-12 23:35:29,250] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-12 23:35:29,437] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-12 23:35:31,834] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-12 23:35:31,950]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-12 23:35:31,951] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-12 23:35:33,846] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-12 23:35:34,635] Login_02 - Step 02: Input 'Email' autofc3652@mail.com
+[INFO ] [2021-08-12 23:35:34,805] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-12 23:35:34,933] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-12 23:35:37,378] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-12 23:35:37,497]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-13 20:50:41,836] ---------- START delete file in folder ----------
+[INFO ] [2021-08-13 20:50:41,840] ---------- END delete file in folder ----------
+[INFO ] [2021-08-13 20:51:50,839] ---------- START delete file in folder ----------
+[INFO ] [2021-08-13 20:51:50,840] ---------- END delete file in folder ----------
+[INFO ] [2021-08-13 20:52:10,747]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-13 20:52:19,804]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-13 20:52:30,741]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-13 20:54:05,016] ---------- START delete file in folder ----------
+[INFO ] [2021-08-13 20:54:05,018] ---------- END delete file in folder ----------
+[INFO ] [2021-08-13 20:54:14,819]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-13 20:54:22,377]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-13 20:54:34,826]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-15 10:35:14,505] ---------- START delete file in folder ----------
+[INFO ] [2021-08-15 10:35:14,507] ---------- END delete file in folder ----------
+[INFO ] [2021-08-15 10:35:14,533] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-15 10:38:36,285] ---------- START delete file in folder ----------
+[INFO ] [2021-08-15 10:38:36,287] ---------- END delete file in folder ----------
+[INFO ] [2021-08-15 10:38:36,303] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-15 10:38:46,535] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-15 10:38:46,662]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-15 10:38:46,663] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-15 10:38:49,417] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-15 10:38:49,719] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-15 10:38:49,914] Register_01 - Step 05: Input 'Email' textbox autofc8314@mail.com
+[INFO ] [2021-08-15 10:38:49,999] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-15 10:38:50,159] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-15 10:38:52,967] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-15 10:38:53,049]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-15 10:38:53,050] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-15 10:40:22,867] ---------- START delete file in folder ----------
+[INFO ] [2021-08-15 10:40:22,870] ---------- END delete file in folder ----------
+[INFO ] [2021-08-15 10:40:22,883] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-15 10:40:30,504] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-15 10:40:30,670]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-15 10:40:30,671] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-15 10:40:32,229] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-15 10:40:32,567] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-15 10:40:32,799] Register_01 - Step 05: Input 'Email' textbox autofc4690@mail.com
+[INFO ] [2021-08-15 10:40:32,898] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-15 10:40:33,055] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-15 10:40:34,599] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-15 10:40:34,680]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-15 10:40:34,680] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-15 10:40:37,105] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-15 10:40:38,360] Login_02 - Step 02: Input 'Email' autofc4690@mail.com
+[INFO ] [2021-08-15 10:40:38,469] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-15 10:40:38,551] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-15 10:40:41,115] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-15 10:40:41,196]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-15 10:42:05,870] ---------- START delete file in folder ----------
+[INFO ] [2021-08-15 10:42:05,879] ---------- END delete file in folder ----------
+[INFO ] [2021-08-15 10:42:05,897] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-15 10:42:13,737] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-15 10:42:13,918]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-15 10:42:13,920] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-15 10:42:15,442] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-15 10:42:15,734] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-15 10:42:15,923] Register_01 - Step 05: Input 'Email' textbox autofc1215@mail.com
+[INFO ] [2021-08-15 10:42:16,015] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-15 10:42:16,170] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-15 10:42:17,682] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-15 10:42:17,752]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-15 10:42:17,752] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-15 10:42:18,684] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-15 10:42:19,866] Login_02 - Step 02: Input 'Email' autofc1215@mail.com
+[INFO ] [2021-08-15 10:42:19,970] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-15 10:42:20,043] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-15 10:42:21,619] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-15 10:42:21,692]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-15 11:16:44,300] ---------- START delete file in folder ----------
+[INFO ] [2021-08-15 11:16:44,302] ---------- END delete file in folder ----------
+[INFO ] [2021-08-15 11:16:44,320] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-15 11:16:52,896] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-15 11:16:53,089]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-15 11:16:53,091] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-15 11:16:54,700] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-15 11:16:55,009] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-15 11:16:55,284] Register_01 - Step 05: Input 'Email' textbox autofc2186@mail.com
+[INFO ] [2021-08-15 11:16:55,396] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-15 11:16:55,584] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-15 11:16:57,151] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-15 11:16:57,233]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-15 11:16:57,233] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-15 11:17:00,143] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-15 11:17:00,818] Login_02 - Step 02: Input 'Email' autofc2186@mail.com
+[INFO ] [2021-08-15 11:17:00,933] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-15 11:17:01,018] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-15 11:17:02,096] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-15 11:17:02,196]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-18 20:54:26,281] ---------- START delete file in folder ----------
+[INFO ] [2021-08-18 20:54:26,293] ---------- END delete file in folder ----------
+[INFO ] [2021-08-18 20:54:26,316] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-18 20:55:56,279] ---------- START delete file in folder ----------
+[INFO ] [2021-08-18 20:55:56,286] ---------- END delete file in folder ----------
+[INFO ] [2021-08-18 20:55:56,309] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-18 20:56:05,650] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-18 20:56:05,828]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-18 20:56:05,831] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-18 20:56:07,556] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-18 20:56:07,856] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-18 20:56:08,114] Register_01 - Step 05: Input 'Email' textbox autofc1716@mail.com
+[INFO ] [2021-08-18 20:56:08,245] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-18 20:56:08,472] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-18 20:56:11,028] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-18 20:56:11,133]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-18 20:56:11,133] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-18 20:56:13,920] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-18 20:56:15,219] Login_02 - Step 02: Input 'Email' autofc1716@mail.com
+[INFO ] [2021-08-18 20:56:15,332] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-18 20:56:15,428] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-18 20:56:17,406] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-18 20:56:17,501]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-08-19 22:04:11,494] ---------- START delete file in folder ----------
+[INFO ] [2021-08-19 22:04:11,498] ---------- END delete file in folder ----------
+[INFO ] [2021-08-19 22:04:11,512] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-19 22:04:22,987] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-19 22:04:23,181]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-19 22:04:23,184] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-19 22:04:24,754] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-19 22:04:25,199] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-19 22:04:25,462] Register_01 - Step 05: Input 'Email' textbox autofc1555@mail.com
+[INFO ] [2021-08-19 22:04:25,547] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-19 22:04:25,796] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-19 22:04:27,541] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-19 22:04:27,640]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-19 22:04:27,640] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-19 22:04:29,586] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-19 22:04:30,275] Login_02 - Step 02: Input 'Email' autofc1555@mail.com
+[INFO ] [2021-08-19 22:04:30,453] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-19 22:04:30,578] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-19 22:04:31,217] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-19 22:08:11,314] ---------- START delete file in folder ----------
+[INFO ] [2021-08-19 22:08:11,318] ---------- END delete file in folder ----------
+[INFO ] [2021-08-19 22:08:11,333] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-19 22:08:20,604] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-19 22:08:20,791]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-19 22:08:20,793] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-19 22:08:22,726] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-19 22:08:23,036] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-19 22:08:23,289] Register_01 - Step 05: Input 'Email' textbox autofc1331@mail.com
+[INFO ] [2021-08-19 22:08:23,397] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-19 22:08:23,595] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-19 22:08:25,888] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-19 22:08:25,998]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-19 22:08:25,999] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-19 22:08:28,696] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-19 22:08:29,303] Login_02 - Step 02: Input 'Email' autofc1331@mail.com
+[INFO ] [2021-08-19 22:08:29,421] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-19 22:08:29,527] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-19 22:08:31,263] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-19 22:09:01,604] OS name = windows 10
+[INFO ] [2021-08-19 22:09:03,020] ---------- QUIT BROWSER SUCCESS ----------
+[INFO ] [2021-08-19 22:12:02,478] ---------- START delete file in folder ----------
+[INFO ] [2021-08-19 22:12:02,484] ---------- END delete file in folder ----------
+[INFO ] [2021-08-19 22:12:02,510] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-19 22:21:33,511] ---------- START delete file in folder ----------
+[INFO ] [2021-08-19 22:21:33,517] ---------- END delete file in folder ----------
+[INFO ] [2021-08-19 22:21:33,533] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-19 22:21:42,319] OS name = windows 10
+[INFO ] [2021-08-19 22:21:43,491] ---------- QUIT BROWSER SUCCESS ----------
+[INFO ] [2021-08-19 23:15:46,726] ---------- START delete file in folder ----------
+[INFO ] [2021-08-19 23:15:46,730] ---------- END delete file in folder ----------
+[INFO ] [2021-08-19 23:15:46,744] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-19 23:15:56,734] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-19 23:15:56,918]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-19 23:15:56,921] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-19 23:15:58,560] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-19 23:15:58,897] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-19 23:15:59,129] Register_01 - Step 05: Input 'Email' textbox autofc1402@mail.com
+[INFO ] [2021-08-19 23:15:59,224] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-19 23:15:59,429] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-19 23:16:01,897] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-19 23:16:01,997]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-19 23:16:01,998] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-19 23:16:04,005] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-19 23:16:05,370] Login_02 - Step 02: Input 'Email' autofc1402@mail.com
+[INFO ] [2021-08-19 23:16:05,474] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-19 23:16:05,579] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-19 23:16:06,305] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-19 23:16:07,131] OS name = windows 10
+[INFO ] [2021-08-19 23:16:07,136] Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'PHAMVANHAI', ip: '192.168.1.237', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 91.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210816143654, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 13688, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e293b745-f838-4d5c-a6cb-4c80907c6976
+[INFO ] [2021-08-19 23:16:07,355] ---------- QUIT BROWSER SUCCESS ----------
+[INFO ] [2021-08-19 23:17:48,072] ---------- START delete file in folder ----------
+[INFO ] [2021-08-19 23:17:48,074] ---------- END delete file in folder ----------
+[INFO ] [2021-08-19 23:17:48,088] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-19 23:17:57,969] Register_01 - Step 01: Verify Homepage displayed
+[INFO ] [2021-08-19 23:17:58,183]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-19 23:17:58,185] Register_01 - Step 02: Click to Register Link
+[INFO ] [2021-08-19 23:18:01,102] Register_01 - Step 03: Click to Male button
+[INFO ] [2021-08-19 23:18:01,420] Register_01 - Step 04: Input FirstName/LastName
+[INFO ] [2021-08-19 23:18:01,719] Register_01 - Step 05: Input 'Email' textbox autofc1277@mail.com
+[INFO ] [2021-08-19 23:18:01,848] Register_01 - Step 06: Input 'Password' textbox 123123
+[INFO ] [2021-08-19 23:18:02,025] Register_01 - Step 07: Click Register button
+[INFO ] [2021-08-19 23:18:06,448] Register_01 - Step 08: Verify Successfully message
+[INFO ] [2021-08-19 23:18:06,536]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-19 23:18:06,536] Register_01 - Step 09: Click Logout
+[INFO ] [2021-08-19 23:18:10,202] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-19 23:18:11,105] Login_02 - Step 02: Input 'Email' autofc1277@mail.com
+[INFO ] [2021-08-19 23:18:11,215] Login_02 - Step 03: Input 'Password' 123123
+[INFO ] [2021-08-19 23:18:11,319] Login_02 - Step 04: Click to Login button
+[INFO ] [2021-08-19 23:18:11,907] Login_02 - Step 05: Verify Homepage displayed
+[INFO ] [2021-08-19 23:18:12,714] OS name = windows 10
+[INFO ] [2021-08-19 23:18:12,718] Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'PHAMVANHAI', ip: '192.168.1.237', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 91.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210816143654, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 18468, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3a114eae-8521-4996-8a6e-11f717db4fa8
+[INFO ] [2021-08-19 23:18:12,909] ---------- QUIT BROWSER SUCCESS ----------
+[INFO ] [2021-08-23 22:45:32,610] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-23 22:45:40,301] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-23 22:47:32,911] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-23 22:47:39,979] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-23 22:54:38,730] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-23 22:54:49,760] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-23 22:55:47,880] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-23 22:55:59,798] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-23 23:01:00,722] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-23 23:01:11,225] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-23 23:11:12,384] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-23 23:11:24,835] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-23 23:26:40,857] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-23 23:26:49,493] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-23 23:28:19,974] Pre-conditon - Step 01: Open browser  chrome with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-23 23:28:25,285] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-23 23:35:52,107] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-23 23:36:00,552] Login_02 - Step 01: Click Login link
+[INFO ] [2021-08-24 09:43:55,339] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-24 09:44:02,984] Login_02 - Step 01: Click Login link

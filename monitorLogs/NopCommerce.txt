@@ -1,0 +1,2 @@
+[INFO ] [2021-08-24 09:43:55,339] Pre-conditon - Step 01: Open browser  firefox with https://demo.nopcommerce.com/ 
+[INFO ] [2021-08-24 09:44:02,984] Login_02 - Step 01: Click Login link

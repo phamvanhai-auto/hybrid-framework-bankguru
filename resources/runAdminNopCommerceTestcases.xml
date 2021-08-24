@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Admin Nop Commerce">
+
+  <parameter name = "url" value = "https://admin-demo.nopcommerce.com/" />
+  
+  <test name="Run On Chrome">
+  	<parameter name = "browser" value = "chrome" />
+    <classes>
+      <class name="com.nopcommerce.admin.Level_10_Upload_Files_Apply_To_FW"/>
+    </classes>
+  </test>
+  
+<!--   <test name="Run On Chrome"> -->
+<!--   	<parameter name = "browser" value = "chrome" /> -->
+<!--     <classes> -->
+<!--       <class name="com.nopcommerce.login.Level_05_Register_Login_Page_Factory"/> -->
+<!--     </classes> -->
+<!--   </test> -->
+  
+<!--   <test name="Run On Edge"> -->
+<!--   	<parameter name = "browser" value = "edge" /> -->
+<!--     <classes> -->
+<!--       <class name="com.nopcommerce.login.Level_05_Register_Login_Page_Factory"/> -->
+<!--     </classes> -->
+<!--   </test> -->
+  
+
+</suite> <!-- Suite -->

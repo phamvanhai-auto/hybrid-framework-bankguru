@@ -24,5 +24,37 @@
 	<classpathentry kind="lib" path="libWebDriverManager/jsoup-1.13.1.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager/slf4j-api-1.7.30.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager/webdrivermanager-4.2.0.jar"/>
+	<classpathentry kind="lib" path="libLog4J/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="libLog4J/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="libReportNG/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="libReportNG/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="libReportNG/reportng-1.1.4.jar"/>
+	<classpathentry kind="lib" path="libReportNG/velocity-1.4.jar"/>
+	<classpathentry kind="lib" path="libExtentV2/bson-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentV2/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="libExtentV2/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="libExtentV2/mongodb-driver-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentV2/mongodb-driver-core-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentV2/sqlite-jdbc-3.8.11.1.jar"/>
+	<classpathentry kind="lib" path="libAllure/allure-java-commons-2.13.5.jar"/>
+	<classpathentry kind="lib" path="libAllure/allure-model-2.13.5.jar"/>
+	<classpathentry kind="lib" path="libAllure/allure-testng-2.13.5.jar"/>
+	<classpathentry kind="lib" path="libAllure/aspectjlib-1.6.2.jar"/>
+	<classpathentry kind="lib" path="libAllure/aspectjrt-1.8.10.jar"/>
+	<classpathentry kind="lib" path="libAllure/aspectjtools-1.8.10.jar"/>
+	<classpathentry kind="lib" path="libAllure/aspectjweaver-1.8.10.jar"/>
+	<classpathentry kind="lib" path="libAllure/bsh-2.0b6.jar"/>
+	<classpathentry kind="lib" path="libAllure/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="libAllure/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="libAllure/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="libAllure/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="libAllure/jackson-core-2.9.8.jar"/>
+	<classpathentry kind="lib" path="libAllure/jackson-databind-2.9.8.jar"/>
+	<classpathentry kind="lib" path="libAllure/jcommander-1.72.jar"/>
+	<classpathentry kind="lib" path="libAllure/joor-java-8-0.9.10.jar"/>
+	<classpathentry kind="lib" path="libAllure/okhttp-3.11.0.jar"/>
+	<classpathentry kind="lib" path="libAllure/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="libAllure/slf4j-api-1.7.30.jar"/>
+	<classpathentry kind="lib" path="libAllure/tika-core-1.20.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

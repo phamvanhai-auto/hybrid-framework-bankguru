@@ -3,12 +3,24 @@
 
   <parameter name = "url" value = "https://demo.nopcommerce.com/" />
   
+  <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name = "commons.MethodListener" />
+<!--         <listener class-name = "reportConfig.ExtentReportListenerV2" /> -->
+<!--         <listener class-name = "reportConfig.ReportNGListener" /> -->
+<!--         <listener class-name = "reportConfig.ExtentTestListener" /> -->
+<!--         <listener class-name = "reportConfig.AllureTestListener" /> -->
+  </listeners>
+  
   <test name="Run On Firefox">
   	<parameter name = "browser" value = "firefox" />
     <classes>
-      <class name="com.nopcommerce.login.Level_08_Register_Login_Dyamic_Locator"/>
+      <class name="com.nopcommerce.common.Common_01_Login"/>
+      <class name="com.nopcommerce.login.Level_14_Register_Login_Share_State"/>
     </classes>
   </test>
+  
   
 <!--   <test name="Run On Chrome"> -->
 <!--   	<parameter name = "browser" value = "chrome" /> -->
