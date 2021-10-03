@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite parallel="false" name="Orange HRM">
+<suite parallel="false" name="Swag Labs">
 
-  <parameter name = "url" value = "https://opensource-demo.orangehrmlive.com/index.php/dashboard" />
+  <parameter name = "url" value = "https://www.saucedemo.com/inventory.html" />
   
   <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
@@ -16,7 +16,7 @@
   <test name="Run On Firefox">
   	<parameter name = "browser" value = "firefox" />
     <classes>
-      <class name="com.hrm.employee.Level_18_Fake_Data"/>
+      <class name="com.swaglabs.products.Level_17_Sort_ASC_DESC"/>
     </classes>
   </test>
   

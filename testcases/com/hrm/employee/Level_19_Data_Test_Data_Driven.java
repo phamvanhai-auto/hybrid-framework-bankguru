@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.hrm.datatest.EmployeeData;
+
 import commons.BaseTest;
 import commons.GlobalConstants;
 import pageObjects.hrm.AddEmployeePO;
@@ -15,9 +17,10 @@ import pageObjects.hrm.DashboardPO;
 import pageObjects.hrm.EmployeeListPO;
 import pageObjects.hrm.LoginPO;
 import pageObjects.hrm.PageGeneratorManager;
+import utilities.DataUtil;
 import pageObjects.hrm.MyInfoPO;
 
-public class Level_16_Live_Coding extends BaseTest {
+public class Level_19_Data_Test_Data_Driven extends BaseTest {
 	WebDriver driver;
 
 	LoginPO loginPage;
@@ -25,6 +28,8 @@ public class Level_16_Live_Coding extends BaseTest {
 	EmployeeListPO employeeListPage;
 	AddEmployeePO addEmployeePage;
 	MyInfoPO myInfoPage;
+	DataUtil fakeData;
+	EmployeeData employeeData;
 
 	String employeeID, statusValue;
 	String empfirstName, emplastName, empUserName, empPassword, fullName;
@@ -45,41 +50,44 @@ public class Level_16_Live_Coding extends BaseTest {
 		log.info("Pre-condition - Step 01: Open browser  " + browserName + " with " + urlPage + " ");
 		driver = openMultipleBrowsers(browserName, urlPage);
 		loginPage = PageGeneratorManager.getLoginPage(driver);
+		fakeData = DataUtil.getData();
 
+		employeeData = EmployeeData.getEmployee();
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 
 		log.info("Pre-condition - Step 02: Login to HRM Admin");
 		dashBoardPage = loginPage.loginToSystem("Admin", "admin123");
 
-		empfirstName = "Eagle";
-		emplastName = "Pham";
-		empUserName = "autofc";
-		empPassword = "12345678";
+//		empfirstName = fakeData.getFirstName();
+//		emplastName = fakeData.getLastName();
+//		empUserName = fakeData.getUserName();
+//		empPassword = fakeData.getPassword();
 		fullName = empfirstName + " " + emplastName;
 		statusValue = "Enabled";
 
-		editEmpFirstName = "Jason";
-		editEmpLastName = "Satham";
+		editEmpFirstName = fakeData.getFirstName();
+		editEmpLastName = fakeData.getLastName();
 		editFullName = editEmpFirstName + " " + editEmpLastName;
 		empGender = "Male";
 		empMaritalStatus = "Single";
 		empNationality = "Vietnamese";
 
-		empAddrStreet1 = "No.1 Springturn";
-		empCity = "Sydney";
-		empProvince = "New South Wales";
-		empZip = "9899";
-		empCountry = "Australia";
-		empHomeTel = "+62 2389234883";
-		empMobile = "02361 3423 23";
+		empAddrStreet1 = fakeData.getStreetName();
+		empCity = fakeData.getCityName();
+		empProvince = fakeData.getState();
+		empZip = fakeData.getZipCode();
+		empCountry = fakeData.getCountry();
+		empHomeTel = fakeData.getHomePhone();
+		empMobile = "0823482437";
 
 		emerContactName = "Martin";
 		emerRelationship = "Brother";
-		emerTelephone = "+62 38924323";
-		emerMobile = "0632234934";
+		emerTelephone = fakeData.getHomePhone();
+		emerMobile = "092383723";
 
-		depenName = "Eric";
+		depenName = "Eric";  
 		depenRelationship = "Child";
 		depenDOB = "2019-09-16";
 
@@ -100,10 +108,10 @@ public class Level_16_Live_Coding extends BaseTest {
 		addEmployeePage = employeeListPage.clickToAddButton();
 
 		log.info("01_Add_New - Step 03: Input valid info 'FirstName' textbox");
-		addEmployeePage.inputToFirstNameTextbox(empfirstName);
+		addEmployeePage.inputToFirstNameTextbox(employeeData.getFirstname());
 
 		log.info("01_Add_New - Step 04: Input valid info 'LastName' textbox");
-		addEmployeePage.inputToLastNameTextbox(emplastName);
+		addEmployeePage.inputToLastNameTextbox(employeeData.getLastname());
 
 		log.info("01_Add_New - Step 05: Get value of 'Employee ID'");
 		employeeID = addEmployeePage.getValueOfEmployeeID("value");
@@ -112,13 +120,13 @@ public class Level_16_Live_Coding extends BaseTest {
 		addEmployeePage.clickToCreateLoginDetailsCheckbox();
 
 		log.info("01_Add_New - Step 07: Input valid info 'User Name'");
-		addEmployeePage.inputToUserNameTextbox(empUserName);
+		addEmployeePage.inputToUserNameTextbox(employeeData.getUsername());
 
 		log.info("01_Add_New - Step 08: Input valid info 'Password'");
-		addEmployeePage.inputToPasswordTextbox(empPassword);
+		addEmployeePage.inputToPasswordTextbox(employeeData.getPassword());
 
 		log.info("01_Add_New - Step 09: Input 'Confirm Password'");
-		addEmployeePage.inputToConfPasswordTextbox(empPassword);
+		addEmployeePage.inputToConfPasswordTextbox(employeeData.getPassword());
 
 		log.info("01_Add_New - Step 10: Select '" + statusValue + "' at 'Status' dropdown");
 		addEmployeePage.selectValueInStatusDropdown(statusValue);
@@ -486,11 +494,6 @@ public class Level_16_Live_Coding extends BaseTest {
 
 		log.info("10_Qualifications - Step 02: Verify value of fields after added");
 		//verifyEquals(myInfoPage.getValueOfTableAtColumnAndRowIndex(driver, "dependent_list", "Name", "1"), depenName);
-	}
-
-	@Test
-	public void Employee_11_Search() {
-
 	}
 
 	

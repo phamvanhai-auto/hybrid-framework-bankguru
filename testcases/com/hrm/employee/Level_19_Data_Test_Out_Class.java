@@ -15,9 +15,10 @@ import pageObjects.hrm.DashboardPO;
 import pageObjects.hrm.EmployeeListPO;
 import pageObjects.hrm.LoginPO;
 import pageObjects.hrm.PageGeneratorManager;
+import utilities.DataUtil;
 import pageObjects.hrm.MyInfoPO;
 
-public class Level_16_Live_Coding extends BaseTest {
+public class Level_19_Data_Test_Out_Class extends BaseTest {
 	WebDriver driver;
 
 	LoginPO loginPage;
@@ -25,10 +26,11 @@ public class Level_16_Live_Coding extends BaseTest {
 	EmployeeListPO employeeListPage;
 	AddEmployeePO addEmployeePage;
 	MyInfoPO myInfoPage;
+	DataUtil fakeData;
 
 	String employeeID, statusValue;
-	String empfirstName, emplastName, empUserName, empPassword, fullName;
-	String editEmpFirstName, editEmpLastName, editFullName, empGender, empMaritalStatus, empNationality;
+	String fullName;
+	String empGender, empMaritalStatus, empNationality;
 	String empAddrStreet1, empCity, empProvince, empZip, empCountry, empHomeTel, empMobile;
 	String emerContactName, emerRelationship, emerTelephone, emerMobile;
 	String depenName, depenRelationship, depenDOB;
@@ -45,6 +47,7 @@ public class Level_16_Live_Coding extends BaseTest {
 		log.info("Pre-condition - Step 01: Open browser  " + browserName + " with " + urlPage + " ");
 		driver = openMultipleBrowsers(browserName, urlPage);
 		loginPage = PageGeneratorManager.getLoginPage(driver);
+		fakeData = DataUtil.getData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -52,34 +55,34 @@ public class Level_16_Live_Coding extends BaseTest {
 		log.info("Pre-condition - Step 02: Login to HRM Admin");
 		dashBoardPage = loginPage.loginToSystem("Admin", "admin123");
 
-		empfirstName = "Eagle";
-		emplastName = "Pham";
-		empUserName = "autofc";
-		empPassword = "12345678";
-		fullName = empfirstName + " " + emplastName;
-		statusValue = "Enabled";
+//		empfirstName = fakeData.getFirstName();
+//		emplastName = fakeData.getLastName();
+//		empUserName = fakeData.getUserName();
+//		empPassword = fakeData.getPassword();
+//		fullName = empfirstName + " " + emplastName;
+//		statusValue = "Enabled";
 
-		editEmpFirstName = "Jason";
-		editEmpLastName = "Satham";
-		editFullName = editEmpFirstName + " " + editEmpLastName;
+//		editEmpFirstName = fakeData.getFirstName();
+//		editEmpLastName = fakeData.getLastName();
+		//editFullName = editEmpFirstName + " " + editEmpLastName;
 		empGender = "Male";
 		empMaritalStatus = "Single";
 		empNationality = "Vietnamese";
 
-		empAddrStreet1 = "No.1 Springturn";
-		empCity = "Sydney";
-		empProvince = "New South Wales";
-		empZip = "9899";
-		empCountry = "Australia";
-		empHomeTel = "+62 2389234883";
-		empMobile = "02361 3423 23";
+		empAddrStreet1 = fakeData.getStreetName();
+		empCity = fakeData.getCityName();
+		empProvince = fakeData.getState();
+		empZip = fakeData.getZipCode();
+		empCountry = fakeData.getCountry();
+		empHomeTel = fakeData.getHomePhone();
+		empMobile = "0823482437";
 
 		emerContactName = "Martin";
 		emerRelationship = "Brother";
-		emerTelephone = "+62 38924323";
-		emerMobile = "0632234934";
+		emerTelephone = fakeData.getHomePhone();
+		emerMobile = "092383723";
 
-		depenName = "Eric";
+		depenName = "Eric";  
 		depenRelationship = "Child";
 		depenDOB = "2019-09-16";
 
@@ -100,10 +103,10 @@ public class Level_16_Live_Coding extends BaseTest {
 		addEmployeePage = employeeListPage.clickToAddButton();
 
 		log.info("01_Add_New - Step 03: Input valid info 'FirstName' textbox");
-		addEmployeePage.inputToFirstNameTextbox(empfirstName);
+		addEmployeePage.inputToFirstNameTextbox(Employee.PersonalDetails.FIRSTNAME);
 
 		log.info("01_Add_New - Step 04: Input valid info 'LastName' textbox");
-		addEmployeePage.inputToLastNameTextbox(emplastName);
+		addEmployeePage.inputToLastNameTextbox(Employee.PersonalDetails.LASTNAME);
 
 		log.info("01_Add_New - Step 05: Get value of 'Employee ID'");
 		employeeID = addEmployeePage.getValueOfEmployeeID("value");
@@ -112,13 +115,13 @@ public class Level_16_Live_Coding extends BaseTest {
 		addEmployeePage.clickToCreateLoginDetailsCheckbox();
 
 		log.info("01_Add_New - Step 07: Input valid info 'User Name'");
-		addEmployeePage.inputToUserNameTextbox(empUserName);
+		addEmployeePage.inputToUserNameTextbox(Employee.PersonalDetails.USERNAME);
 
 		log.info("01_Add_New - Step 08: Input valid info 'Password'");
-		addEmployeePage.inputToPasswordTextbox(empPassword);
+		addEmployeePage.inputToPasswordTextbox(Employee.PersonalDetails.PASSWORD);
 
 		log.info("01_Add_New - Step 09: Input 'Confirm Password'");
-		addEmployeePage.inputToConfPasswordTextbox(empPassword);
+		addEmployeePage.inputToConfPasswordTextbox(Employee.PersonalDetails.PASSWORD);
 
 		log.info("01_Add_New - Step 10: Select '" + statusValue + "' at 'Status' dropdown");
 		addEmployeePage.selectValueInStatusDropdown(statusValue);
@@ -131,13 +134,13 @@ public class Level_16_Live_Coding extends BaseTest {
 		employeeListPage = PageGeneratorManager.getEmployeeListPage(driver);
 
 		log.info("01_Add_New - Step 13: Input valid info to 'Employee Name' textbox ");
-		employeeListPage.inputToEmployeeNameTextbox(empfirstName + " " + emplastName);
+		employeeListPage.inputToEmployeeNameTextbox(Employee.PersonalDetails.FULLNAME);
 
 		log.info("01_Add_New - Step 14: Click to 'Search' button");
 		employeeListPage.clickToSearchButton();
 
 		log.info("01_Add_New - Step 15: Verify Employee Info at Result Table");
-		verifyTrue(employeeListPage.isEmployeeInfoDisplayedAtTable(employeeID, empfirstName, emplastName));
+		verifyTrue(employeeListPage.isEmployeeInfoDisplayedAtTable(employeeID, Employee.PersonalDetails.FIRSTNAME, Employee.PersonalDetails.LASTNAME));
 
 	}
 
@@ -153,10 +156,10 @@ public class Level_16_Live_Coding extends BaseTest {
 		addEmployeePage = PageGeneratorManager.getAddEmployeePage(driver);
 
 		log.info("01_Add_New - Step 03: Input valid info 'FirstName' textbox");
-		addEmployeePage.inputToTextBoxByIDs(driver, "firstName", empfirstName);
+		addEmployeePage.inputToTextBoxByIDs(driver, "firstName", Employee.PersonalDetails.FIRSTNAME);
 
 		log.info("01_Add_New - Step 04: Input valid info 'LastName' textbox");
-		addEmployeePage.inputToTextBoxByIDs(driver, "lastName", emplastName);
+		addEmployeePage.inputToTextBoxByIDs(driver, "lastName", Employee.PersonalDetails.LASTNAME);
 
 		log.info("01_Add_New - Step 05: Get value of 'Employee ID'");
 		employeeID = addEmployeePage.getValueOfTextBoxByID(driver, "employeeId");
@@ -166,13 +169,13 @@ public class Level_16_Live_Coding extends BaseTest {
 		addEmployeePage.clickToCheckboxByLabelName(driver, "Create Login Details");
 
 		log.info("01_Add_New - Step 07: Input valid info 'User Name'");
-		addEmployeePage.inputToTextBoxByIDs(driver, "user_name", empUserName);
+		addEmployeePage.inputToTextBoxByIDs(driver, "user_name", Employee.PersonalDetails.USERNAME);
 
 		log.info("01_Add_New - Step 08: Input valid info 'Password'");
-		addEmployeePage.inputToTextBoxByIDs(driver, "user_password", empPassword);
+		addEmployeePage.inputToTextBoxByIDs(driver, "user_password", Employee.PersonalDetails.PASSWORD);
 
 		log.info("01_Add_New - Step 09: Input 'Confirm Password'");
-		addEmployeePage.inputToTextBoxByIDs(driver, "re_password", empPassword);
+		addEmployeePage.inputToTextBoxByIDs(driver, "re_password", Employee.PersonalDetails.PASSWORD);
 
 		log.info("01_Add_New - Step 10: Select '" + statusValue + "' at 'Status' dropdown");
 		addEmployeePage.selectItemDropdownByID(driver, "status", statusValue);
@@ -200,8 +203,8 @@ public class Level_16_Live_Coding extends BaseTest {
 		log.info("01_Add_New - Step 15: Verify Employee Info at Result Table");
 		// verifyTrue(employeeListPage.isEmployeeInfoDisplayedAtTable(employeeID, firstName, lastName));
 		verifyEquals(employeeListPage.getValueOfTableAtColumnAndRowIndex(driver, "resultTable", "Id", "1"), employeeID);
-		verifyEquals(employeeListPage.getValueOfTableAtColumnAndRowIndex(driver, "resultTable", "First (& Middle) Name", "1"), empfirstName);
-		verifyEquals(employeeListPage.getValueOfTableAtColumnAndRowIndex(driver, "resultTable", "Last Name", "1"), emplastName);
+		verifyEquals(employeeListPage.getValueOfTableAtColumnAndRowIndex(driver, "resultTable", "First (& Middle) Name", "1"), Employee.PersonalDetails.FIRSTNAME);
+		verifyEquals(employeeListPage.getValueOfTableAtColumnAndRowIndex(driver, "resultTable", "Last Name", "1"), Employee.PersonalDetails.LASTNAME);
 
 	}
 
@@ -221,7 +224,7 @@ public class Level_16_Live_Coding extends BaseTest {
 		loginPage = employeeListPage.logoutToSystem(driver);
 
 		log.info("02_Upload_Avatar - Step 02: Login to system by User acc");
-		loginPage.loginToSystem(empUserName, empPassword);
+		loginPage.loginToSystem(Employee.PersonalDetails.USERNAME, Employee.PersonalDetails.PASSWORD);
 		dashBoardPage = PageGeneratorManager.getDashboardPage(driver);
 
 		log.info("02_Upload_Avatar - Step 03: Open Personal details page");
@@ -273,10 +276,10 @@ public class Level_16_Live_Coding extends BaseTest {
 		verifyFalse(myInfoPage.isFieldEnabledByID(driver, "personal_DOB"));
 
 		log.info("03_Personal_Details - Step 03: Input new value to 'FirstName' textbox");
-		myInfoPage.inputToTextBoxByID(driver, "personal_txtEmpFirstName", editEmpFirstName);
+		myInfoPage.inputToTextBoxByID(driver, "personal_txtEmpFirstName", Employee.ContactDetails.EDIT_FIRSTNAME);
 
 		log.info("03_Personal_Details - Step 03: Input new value to 'LastName' textbox");
-		myInfoPage.inputToTextBoxByID(driver, "personal_txtEmpLastName", editEmpLastName);
+		myInfoPage.inputToTextBoxByID(driver, "personal_txtEmpLastName", Employee.ContactDetails.EDIT_LASTNAME);
 
 		log.info("03_Personal_Details - Step 03: Select new value to 'Gender' radio");
 		myInfoPage.clickToRadioButtonByName(driver, empGender);
@@ -297,10 +300,10 @@ public class Level_16_Live_Coding extends BaseTest {
 		verifyTrue(myInfoPage.isMessageSuccessDisplayedByName(driver, "Successfully Saved"));
 
 		log.info("03_Personal_Details - Step 03: Verify 'FirstName' textbox updated success");
-		verifyEquals(myInfoPage.getValueOfTextBoxByID(driver, "personal_txtEmpFirstName"), editEmpFirstName);
+		verifyEquals(myInfoPage.getValueOfTextBoxByID(driver, "personal_txtEmpFirstName"), Employee.ContactDetails.EDIT_FIRSTNAME);
 
 		log.info("03_Personal_Details - Step 03: Verify 'LastName' textbox updated success");
-		verifyEquals(myInfoPage.getValueOfTextBoxByID(driver, "personal_txtEmpLastName"), editEmpLastName);
+		verifyEquals(myInfoPage.getValueOfTextBoxByID(driver, "personal_txtEmpLastName"), Employee.ContactDetails.EDIT_LASTNAME);
 
 		log.info("03_Personal_Details - Step 03: Verify 'Employee ID' value textbox ");
 		// verifyEquals(myInfoPage.getValueOfTextBoxByID(driver, "personal_txtEmployeeId"), employeeID);
@@ -430,7 +433,7 @@ public class Level_16_Live_Coding extends BaseTest {
 		
 		log.info("07_Edit_Job - Step 13: Input valid info to 'Employee Name' textbox ");
 		employeeListPage.SleepInSecond(3);
-		employeeListPage.inputToTextBoxByIDs(driver, "empsearch_employee_name_empName", editFullName);
+		//employeeListPage.inputToTextBoxByIDs(driver, "empsearch_employee_name_empName", editFullName);
 		employeeListPage.SleepInSecond(3);
 
 		log.info("07_Edit_Job - Step 14: Click to 'Search' button");
@@ -459,7 +462,7 @@ public class Level_16_Live_Coding extends BaseTest {
 	public void Employee_10_Qualifications() {
 		log.info("10_Qualifications - Step 01: Login to User system");
 		loginPage = myInfoPage.logoutToSystem(driver);
-		loginPage.loginToSystem(empUserName, empPassword);
+		loginPage.loginToSystem(Employee.PersonalDetails.USERNAME, Employee.PersonalDetails.PASSWORD);
 		dashBoardPage = PageGeneratorManager.getDashboardPage(driver);
 		
 		log.info("10_Qualifications - Step 02: Open 'My Info' at Header");

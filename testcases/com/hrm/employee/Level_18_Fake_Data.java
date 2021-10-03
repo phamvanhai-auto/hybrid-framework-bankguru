@@ -15,9 +15,10 @@ import pageObjects.hrm.DashboardPO;
 import pageObjects.hrm.EmployeeListPO;
 import pageObjects.hrm.LoginPO;
 import pageObjects.hrm.PageGeneratorManager;
+import utilities.DataUtil;
 import pageObjects.hrm.MyInfoPO;
 
-public class Level_16_Live_Coding extends BaseTest {
+public class Level_18_Fake_Data extends BaseTest {
 	WebDriver driver;
 
 	LoginPO loginPage;
@@ -25,6 +26,7 @@ public class Level_16_Live_Coding extends BaseTest {
 	EmployeeListPO employeeListPage;
 	AddEmployeePO addEmployeePage;
 	MyInfoPO myInfoPage;
+	DataUtil fakeData;
 
 	String employeeID, statusValue;
 	String empfirstName, emplastName, empUserName, empPassword, fullName;
@@ -45,6 +47,7 @@ public class Level_16_Live_Coding extends BaseTest {
 		log.info("Pre-condition - Step 01: Open browser  " + browserName + " with " + urlPage + " ");
 		driver = openMultipleBrowsers(browserName, urlPage);
 		loginPage = PageGeneratorManager.getLoginPage(driver);
+		fakeData = DataUtil.getData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -52,34 +55,34 @@ public class Level_16_Live_Coding extends BaseTest {
 		log.info("Pre-condition - Step 02: Login to HRM Admin");
 		dashBoardPage = loginPage.loginToSystem("Admin", "admin123");
 
-		empfirstName = "Eagle";
-		emplastName = "Pham";
-		empUserName = "autofc";
-		empPassword = "12345678";
+		empfirstName = fakeData.getFirstName();
+		emplastName = fakeData.getLastName();
+		empUserName = fakeData.getUserName();
+		empPassword = fakeData.getPassword();
 		fullName = empfirstName + " " + emplastName;
 		statusValue = "Enabled";
 
-		editEmpFirstName = "Jason";
-		editEmpLastName = "Satham";
+		editEmpFirstName = fakeData.getFirstName();
+		editEmpLastName = fakeData.getLastName();
 		editFullName = editEmpFirstName + " " + editEmpLastName;
 		empGender = "Male";
 		empMaritalStatus = "Single";
 		empNationality = "Vietnamese";
 
-		empAddrStreet1 = "No.1 Springturn";
-		empCity = "Sydney";
-		empProvince = "New South Wales";
-		empZip = "9899";
-		empCountry = "Australia";
-		empHomeTel = "+62 2389234883";
-		empMobile = "02361 3423 23";
+		empAddrStreet1 = fakeData.getStreetName();
+		empCity = fakeData.getCityName();
+		empProvince = fakeData.getState();
+		empZip = fakeData.getZipCode();
+		empCountry = fakeData.getCountry();
+		empHomeTel = fakeData.getHomePhone();
+		empMobile = "0823482437";
 
 		emerContactName = "Martin";
 		emerRelationship = "Brother";
-		emerTelephone = "+62 38924323";
-		emerMobile = "0632234934";
+		emerTelephone = fakeData.getHomePhone();
+		emerMobile = "092383723";
 
-		depenName = "Eric";
+		depenName = "Eric";  
 		depenRelationship = "Child";
 		depenDOB = "2019-09-16";
 
