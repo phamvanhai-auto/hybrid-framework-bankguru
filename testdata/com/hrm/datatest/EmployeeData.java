@@ -27,17 +27,36 @@ public class EmployeeData {
 	}
 	
 	@JsonProperty("firstname")
-	String firstname;
+	private String firstname;
 	
 	@JsonProperty("lastname")
-	String lastname;
+	private String lastname;
 
 	@JsonProperty("username")
-	String username;
+	private String username;
 	
 	@JsonProperty("password")
-	String password;
+	private String password;
+	
+	@JsonProperty("ContactDetail")
+	ContactDetail contactDetail;
 
+	public static class ContactDetail {
+		@JsonProperty("editFirstName")
+		private String editFirstName;
+		
+		@JsonProperty("editLastName")
+		private String editLastName;
+
+	}
+
+	public String getEditFirstName() {
+		return contactDetail.editFirstName;
+	}
+
+	public String getEditLastName() {
+		return contactDetail.editLastName;
+	}
 	
 	public String getFirstname() {
 		return firstname;
@@ -54,4 +73,6 @@ public class EmployeeData {
 	public String getPassword() {
 		return password;
 	}
+	
+	
 }
