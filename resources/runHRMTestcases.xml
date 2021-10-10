@@ -16,17 +16,17 @@
   <test name="Run On Firefox">
   	<parameter name = "browser" value = "firefox" />
     <classes>
-      <class name="com.hrm.employee.Level_18_Fake_Data"/>
+      <class name="com.hrm.employee.Level_20_Browser_Capabilities"/>
     </classes>
   </test>
   
   
-<!--   <test name="Run On Chrome"> -->
-<!--   	<parameter name = "browser" value = "chrome" /> -->
-<!--     <classes> -->
-<!--       <class name="com.nopcommerce.login.Level_05_Register_Login_Page_Factory"/> -->
-<!--     </classes> -->
-<!--   </test> -->
+  <test name="Run On Chrome">
+  	<parameter name = "browser" value = "chrome" />
+    <classes>
+      <class name="com.hrm.employee.Level_20_Browser_Capabilities"/>
+    </classes>
+  </test>
   
 <!--   <test name="Run On Edge"> -->
 <!--   	<parameter name = "browser" value = "edge" /> -->

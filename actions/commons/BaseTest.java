@@ -8,8 +8,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeTest;
@@ -55,15 +58,33 @@ public class BaseTest {
 		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
 
 		if (browser == BROWSER.FIREFOX) {
-			//WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.firefoxdriver().setup();
 			// System.setProperty("webdriver.gecko.driver", projectPath + ".\\browserDrivers\\geckodriver.exe");
-			setBrowserDriverProperty();
-			driver = new FirefoxDriver();
+			//setBrowserDriverProperty();
+			
+			//add extension
+			FirefoxProfile profile = new FirefoxProfile();
+			File file = new File(GlobalConstants.PROJECT_PATH + File.separator + "browserExtension" + File.separator + "selectorshub-3.3.0-fx.xpi");
+			profile.addExtension(file);
+			FirefoxOptions options = new FirefoxOptions();
+			options.setProfile(profile);
+			
+			//disable console log
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + File.separator + "browserLogs" + File.separator + "Firefox.log");
+			
+			driver = new FirefoxDriver(options);
+			
 		} else if (browser == BROWSER.CHROME) {
-			//WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().setup();
 			// System.setProperty("webdriver.chrome.driver", projectPath + ".\\browserDrivers\\chromedriver.exe");
-			setBrowserDriverProperty();
-			driver = new ChromeDriver();
+			//setBrowserDriverProperty();
+			
+			File file = new File(GlobalConstants.PROJECT_PATH + File.separator + "browserExtension" + File.separator + "chrome_4_0_5_0.crx");
+			ChromeOptions options = new ChromeOptions();
+			options.addExtensions(file);	
+			driver = new ChromeDriver(options);
+			
 		} else if (browser == BROWSER.EDGE) {
 			//WebDriverManager.edgedriver().setup();
 			// System.setProperty("webdriver.edge.driver", projectPath + ".\\browserDrivers\\msedgedriver.exe");
