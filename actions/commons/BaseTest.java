@@ -13,6 +13,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeTest;
@@ -31,7 +32,7 @@ public class BaseTest {
 	String osName = System.getProperty("os.name");
 
 	public enum BROWSER {
-		CHROME, FIREFOX, IE, EDGE, SAFARI, CHEADLESS, FHEADLESS
+		CHROME, FIREFOX, IE, EDGE, SAFARI, CHEADLESS, FHEADLESS, COCCOC, OPERA
 	}
 
 	public WebDriver openMultipleBrowsers(String browserName) {
@@ -79,18 +80,36 @@ public class BaseTest {
 			WebDriverManager.chromedriver().setup();
 			// System.setProperty("webdriver.chrome.driver", projectPath + ".\\browserDrivers\\chromedriver.exe");
 			//setBrowserDriverProperty();
-			
+			//add extention
 			File file = new File(GlobalConstants.PROJECT_PATH + File.separator + "browserExtension" + File.separator + "chrome_4_0_5_0.crx");
 			ChromeOptions options = new ChromeOptions();
 			options.addExtensions(file);	
+			
+			options.addArguments("--disable-geolocation");
+			options.addArguments("--disable-notification");
+			options.addArguments("--disable-infobars");
 			driver = new ChromeDriver(options);
 			
 		} else if (browser == BROWSER.EDGE) {
 			//WebDriverManager.edgedriver().setup();
 			// System.setProperty("webdriver.edge.driver", projectPath + ".\\browserDrivers\\msedgedriver.exe");
 			setBrowserDriverProperty();
-			driver = new EdgeDriver();
-		} else {
+			driver = new EdgeDriver(); 
+		} else if (browser == BROWSER.COCCOC) {
+			WebDriverManager.edgedriver().setup();
+			// System.setProperty("webdriver.edge.driver", projectPath + ".\\browserDrivers\\msedgedriver.exe");
+			//setBrowserDriverProperty();
+			ChromeOptions options = new ChromeOptions();
+			options.setBinary("C:\\Program Files (x86)\\CocCoc\\Browser\\Application\\browser.exe");
+			driver = new ChromeDriver(options); 
+		} else if (browser == BROWSER.OPERA) {
+			WebDriverManager.edgedriver().setup();
+			// System.setProperty("webdriver.edge.driver", projectPath + ".\\browserDrivers\\msedgedriver.exe");
+			//setBrowserDriverProperty();
+			
+			driver = new OperaDriver();
+		} 
+		else {
 			throw new RuntimeException("Please check browser again!");
 		}
 
