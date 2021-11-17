@@ -2,10 +2,13 @@ package commons;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Random;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,6 +17,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeTest;
@@ -117,6 +122,107 @@ public class BaseTest {
 		return driver;
 	}
 
+	public WebDriver openMultipleBrowsers(String browserName, String urlPage, String ipAddress, String portName) {
+		
+		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
+		DesiredCapabilities capability = null;
+		
+		if (browser == BROWSER.FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			// System.setProperty("webdriver.gecko.driver", projectPath + ".\\browserDrivers\\geckodriver.exe");
+			//setBrowserDriverProperty();
+			
+			capability = DesiredCapabilities.firefox();
+			capability.setBrowserName("firefox");
+			capability.setPlatform(Platform.WINDOWS);
+			
+			FirefoxOptions fxOption = new FirefoxOptions();
+			fxOption.merge(capability);
+			
+		} else if (browser == BROWSER.CHROME) {
+			WebDriverManager.chromedriver().setup();
+			// System.setProperty("webdriver.chrome.driver", projectPath + ".\\browserDrivers\\chromedriver.exe");
+			//setBrowserDriverProperty();
+			//add extention
+			capability = DesiredCapabilities.chrome();
+			capability.setBrowserName("chrome");
+			capability.setPlatform(Platform.WINDOWS);
+			
+			ChromeOptions chOption = new ChromeOptions();
+			chOption.merge(capability);
+			
+		} 
+		else {
+			throw new RuntimeException("Please check browser again!");
+		}
+		
+		try {
+			driver = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub", ipAddress, portName)), capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+		driver.get(urlPage);
+		return driver;
+	}
+	
+	public WebDriver openMultipleBrowsersBrowserstack(String browserName, String urlPage, String osName, String osVersion) {
+		
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("os", osName);
+		caps.setCapability("os_version", osVersion);
+		caps.setCapability("browser", browserName);
+		caps.setCapability("browser_version", "latest");
+		caps.setCapability("name", "Run on " + osName + " " + osVersion + " & " + browserName);
+		caps.setCapability("resolution", "1920x1080");
+		
+		try {
+			driver = new RemoteWebDriver(new URL(GlobalConstants.BROWSER_STACK_URL), caps);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+		driver.get(urlPage);
+		return driver;
+	}
+	
+	public WebDriver openMultipleBrowsersSaucelabs(String browserName, String urlPage, String osName) {
+		
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("platformName", osName);
+		caps.setCapability("browserName", browserName);
+		caps.setCapability("browserVersion", "latest");
+		
+		try {
+			driver = new RemoteWebDriver(new URL(GlobalConstants.SAUCE_LABS_URL), caps);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+		driver.get(urlPage);
+		return driver;
+	}
+
+	public WebDriver openMultipleBrowsersCrossBrowser(String browserName, String urlPage, String osName) {
+
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("browserName", browserName);
+		caps.setCapability("platform", osName);
+		
+		caps.setCapability("screenResolution", "1920x1080");
+		caps.setCapability("record_video", "true");
+		caps.setCapability("name", "Run on " + osName + " & " + browserName);
+
+		try {
+			driver = new RemoteWebDriver(new URL(GlobalConstants.CROSS_LABS_URL), caps);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+		driver.get(urlPage);
+		return driver;
+	}
+	
 	public WebDriver getDriver() {
 		return this.driver;
 	}

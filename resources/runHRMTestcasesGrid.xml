@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Selenium Grid">
+  
+  <test name="Run On Firefox">
+  	<parameter name = "browser" value = "firefox" />
+  	<parameter name = "ipAddress" value = "192.168.1.237" />
+  	<parameter name = "port" value = "5555" />
+    <classes>
+      <class name="com.hrm.cloud.Level_16_Live_Coding_II_Grid"/>
+    </classes>
+  </test>
+  
+  
+  <test name="Run On Chrome">
+  	<parameter name = "browser" value = "chrome" />
+  	<parameter name = "ipAddress" value = "192.168.1.237" />
+  	<parameter name = "port" value = "5555" />
+    <classes>
+      <class name="com.hrm.cloud.Level_16_Live_Coding_II_Grid"/>
+    </classes>
+  </test>
+ 
+
+</suite> <!-- Suite -->

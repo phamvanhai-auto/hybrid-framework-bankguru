@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Organe HRM on Cloud testing">
+  
+  <parameter name = "url" value = "https://opensource-demo.orangehrmlive.com/index.php/dashboard" />
+  
+  <test name="Run On Firefox">
+  	<parameter name = "browser" value = "Firefox" />
+  	<parameter name = "osName" value = "Windows 10" />
+    <classes>
+      <class name="com.hrm.cloud.Level_16_Live_Coding_V_Crossbrowser"/>
+    </classes>
+  </test>
+  
+  
+  <test name="Run On Safari">
+  	<parameter name = "browser" value = "Safari" />
+  	<parameter name = "osName" value = "MacOS 11.0" />
+    <classes>
+      <class name="com.hrm.cloud.Level_16_Live_Coding_V_Crossbrowser"/>
+    </classes>
+  </test>
+ 
+
+</suite> <!-- Suite -->
