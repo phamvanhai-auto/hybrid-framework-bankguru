@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Selenium Grid">
   
+  <parameter name = "url" value = "https://opensource-demo.orangehrmlive.com/index.php/dashboard" />
+  <parameter name = "envName" value = "grid" />
+  
   <test name="Run On Firefox">
   	<parameter name = "browser" value = "firefox" />
   	<parameter name = "ipAddress" value = "192.168.1.237" />

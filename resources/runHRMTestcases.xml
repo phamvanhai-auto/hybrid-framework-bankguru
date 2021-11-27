@@ -2,6 +2,7 @@
 <suite parallel="false" name="Orange HRM">
 
   <parameter name = "url" value = "https://opensource-demo.orangehrmlive.com/index.php/dashboard" />
+  <parameter name = "envName" value = "local" />
   
   <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
@@ -16,7 +17,7 @@
   <test name="Run On Firefox">
   	<parameter name = "browser" value = "firefox" />
     <classes>
-      <class name="com.hrm.employee.Level_20_Browser_Capabilities"/>
+      <class name="com.hrm.cloud.Level_16_Live_Coding_VI_All"/>
     </classes>
   </test>
   
@@ -24,16 +25,9 @@
   <test name="Run On Chrome">
   	<parameter name = "browser" value = "chrome" />
     <classes>
-      <class name="com.hrm.employee.Level_20_Browser_Capabilities"/>
+      <class name="com.hrm.cloud.Level_16_Live_Coding_VI_All"/>
     </classes>
   </test>
-  
-<!--   <test name="Run On Edge"> -->
-<!--   	<parameter name = "browser" value = "edge" /> -->
-<!--     <classes> -->
-<!--       <class name="com.nopcommerce.login.Level_05_Register_Login_Page_Factory"/> -->
-<!--     </classes> -->
-<!--   </test> -->
   
 
 </suite> <!-- Suite -->

@@ -23,6 +23,11 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeTest;
 
+import factoryEnviroment.BrowserstackFactory;
+import factoryEnviroment.CrossbrowserFactory;
+import factoryEnviroment.GridFactory;
+import factoryEnviroment.LocalFactory;
+import factoryEnviroment.SaucelabsFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
@@ -31,6 +36,32 @@ public class BaseTest {
 	
 	protected BaseTest() {
 		 log = LogFactory.getLog(getClass());
+	}
+	
+	protected WebDriver getBrowserDriver(String browserName, String urlPage, String envName, String ipAddress, String portName, String osName, String osVersion) {
+		switch (envName) {
+		case "local":
+			driver = new LocalFactory(browserName).createDriver();
+			break;
+		case "grid":
+			driver = new GridFactory(browserName, ipAddress, portName).createDriver();
+			break;
+		case "browserstack":
+			driver = new BrowserstackFactory(browserName, osName, osVersion).createDriver();
+			break;
+		case "saucelabs":
+			driver = new SaucelabsFactory(browserName, osName).createDriver();
+			break;
+		case "crossbrowser":
+			driver = new CrossbrowserFactory(browserName, osName).createDriver();
+			break;
+
+		default:
+			break;
+		}
+		
+		driver.get(urlPage);
+		return driver;
 	}
 	
 	String projectPath = System.getProperty("user.dir");
